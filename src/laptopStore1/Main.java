@@ -31,58 +31,57 @@ public class Main {
         int choice = sc.nextInt();
 
         switch (choice) {
-            case 1:
+            case 1 -> {
                 System.out.println("Доступные на данный момент брэнды: ");
                 store.toStringBrand();
                 System.out.println("Введите брэнд, который Вас интересует");
                 String brand = sc.next();
                 store.searchByBrand(brand);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("Доступные на данный момент модели: ");
                 store.toStringModel();
                 System.out.println("Введите модель, которая Вас интересует");
                 String model = sc.next();
                 store.searchByModel(model);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("Введите минимальный объем оперативной памяти, который Вас интересует ");
                 int ram = sc.nextInt();
                 store.searchByRam(ram);
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.println("Введите минимальный объем жесткого диска, который Вас интересует ");
                 int hd = sc.nextInt();
                 store.searchByHardDisk(hd);
-                break;
-            case 5:
+            }
+            case 5 -> {
                 System.out.println("Доступные на данный момент операционные системы: ");
                 store.toStringOS();
                 System.out.println("Введите операционную систему, которая Вас интересует");
                 String os = sc.next();
                 store.searchByOS(os);
-                break;
-            case 6:
+            }
+            case 6 -> {
                 System.out.println("Введите минимальную диагональ экрана, которая Вас интересует ");
                 int sd = sc.nextInt();
                 store.searchByScreenDiagonal(sd);
-                break;
-            case 7:
+            }
+            case 7 -> {
                 System.out.println("Доступные на данный момент цвета корпуса: ");
                 store.toStringColor();
                 System.out.println("Введите цвет корпуса, который Вас интересует");
                 String col = sc.next();
                 store.searchByColor(col);
-                break;
-            case 8:
+            }
+            case 8 -> {
                 System.out.println("Введите минимальную цену, которая Вас интересует: ");
                 int min = sc.nextInt();
                 System.out.println("Введите максимальную цену, которая Вас интересует: ");
                 int max = sc.nextInt();
                 store.searchByPrice(min, max);
-                break;
-            default:
-                System.out.println("Введен неверный номер параметра. Повторите попытку.");
+            }
+            default -> System.out.println("Введен неверный номер параметра. Повторите попытку.");
         }
     }
 }
